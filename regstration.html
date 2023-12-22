@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Registration</title>
+</head>
+<body>
+	<form id="myForm">
+		<input type="text" name="name" id="name">
+		<select id="gender">
+			<option value="">--</option>
+			<option value="male">M</option>
+			<option value="female">F</option>
+		</select>
+		<input type="text" name="email" id="email">
+		<input type="text" name="mobile" id="mobile">
+		<input type="reset" value="Reset" id="resetButton">
+    </form>
+	<hr>
+	<h1 id="dName" class="input">NAME</h1>
+	<h2 id="dGender" class="input">GENDER</h2>
+	<h3 id="dEmail" class="input">EMAIL</h3>
+	<h4 id="dMobile" class="input">MOBILE</h4>
+	<hr>
+	<button onclick="showName()">NAME</button>
+	<button onclick="showGender()">GENDER</button>
+	<button onclick="showEmail()">EMAIL</button>
+	<button onclick="showMobile()">MOBILE</button>
+	<button onclick="resetDisplay()">RESET DISPLAY</button>
+	<script type="text/javascript">
+		function showName() {
+			let name=document.getElementById("name").value;
+            document.getElementById("dName").innerText=name;
+		}
+
+		function showGender() {
+			let gender=document.getElementById("gender").value;
+            document.getElementById("dGender").innerText=gender;
+		}
+
+		function showEmail() {
+			let email=document.getElementById("email").value;
+            document.getElementById("dEmail").innerText=email;
+		}
+
+		function showMobile() {
+			let mobile=document.getElementById("mobile").value;
+            document.getElementById("dMobile").innerText=mobile;
+		}
+
+		function resetDisplay() {
+			// Reset all the headings (h1, h2, h3, h4) to blank values
+			let name=document.getElementById("name").value;
+			document.getElementById("dName").innerText="";
+
+			let gender=document.getElementById("gender").value;
+            document.getElementById("dGender").innerText="";
+
+			let email=document.getElementById("email").value;
+            document.getElementById("dEmail").innerText="";
+
+			let mobile=document.getElementById("mobile").value;
+            document.getElementById("dMobile").innerText="";
+		}
+
+		
+	</script>
+</body>
+</html>
